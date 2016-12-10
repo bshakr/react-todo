@@ -1,0 +1,19 @@
+.center {
+  text-align: center;
+}
+
+ul.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.todo-item {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  background: #fbfbfb;
+  padding: 10px;
+  border-radius: 4px;
+  color: #888;
+}
