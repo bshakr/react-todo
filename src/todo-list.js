@@ -4,7 +4,7 @@ import TodoItem from './todo-item';
 class TodoList extends Component {
   render() {
     const todos = this.props.todos.map((todo, i) => {
-      return (<TodoItem key={i} todoText={todo} />);
+      return (<TodoItem complete={this.props.complete} key={i} todo={todo} />);
     });
 
     return (
