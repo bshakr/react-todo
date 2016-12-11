@@ -13,11 +13,9 @@ class App extends Component {
   }
 
   addTodo(event) {
-    if (event.key === 'Enter') {
-      this.state.todos.push({ text: event.target.value, isComplete: false });
-      event.target.value = '';
-      this.setState({ todos: this.state.todos });
-    }
+    this.state.todos.push({ text: event.target.value, isComplete: false });
+    event.target.value = '';
+    this.setState({ todos: this.state.todos });
   }
 
   completeTodo(todo) {
