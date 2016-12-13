@@ -9,7 +9,7 @@ class TodoList extends Component {
 
     return (
       <div className="row">
-        <div className="col-sm-6 col-sm-offset-3">
+        <div className="col-sm-10 col-sm-offset-1">
           <ul className="todo-list">{todos}</ul>
         </div>
       </div>
