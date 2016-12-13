@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   completeTodo(todo) {
-    console.log(todo);
     const todos = this.state.todos.map((t) => {
       if(t.text !== todo) {
         return t
@@ -37,7 +36,6 @@ class App extends Component {
         return -1;
       }
     });
-    console.log(todos) 
     this.setState({ todos: todos });
   }
     
@@ -45,9 +43,13 @@ class App extends Component {
   render() {
     return (
         <div className="container">
-          <Header />
-          <InputField addTodo={this.addTodo}/>
-          <TodoList complete={this.completeTodo} todos={this.state.todos} />
+          <div className="col-sm-6 col-sm-offset-3">
+            <div className="todo-day-container">
+              <Header />
+              <InputField addTodo={this.addTodo}/>
+              <TodoList complete={this.completeTodo} todos={this.state.todos} />
+            </div>
+          </div>
         </div>
     );
   }

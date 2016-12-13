@@ -1,5 +1,26 @@
+body {
+  color: #34495e;
+  font-family: "proxima-nova-soft", sans-serif;
+  background: #F7F6F5;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #34495e;
+  font-family: "proxima-nova-soft", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
 .center {
   text-align: center;
+}
+
+.todo-day-container {
+  padding-bottom: 30px;
+  background: #fff;
+  margin-top: 100px;
+  border: 2px solid #EBEBEB;
+  border-radius: 4px;
 }
 
 ul.todo-list {
