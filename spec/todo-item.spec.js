@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { shallow } from 'enzyme';
-import TodoItem from '../src/todo-item';
+import TodoItem from '../src/components/todo-item';
 
 describe('TodoItem', () => {
   const todo = { text: 'Buy milk', isComplete: true };

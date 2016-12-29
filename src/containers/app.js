@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './header';
-import InputField from './input-field';
-import TodoList from './todo-list';
-import './app.css';
+import Header from '../components/header';
+import InputField from '../components/input-field';
+import TodoList from '../components/todo-list';
+import '../app.css';
 
 class App extends Component {
   constructor() {

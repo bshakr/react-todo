@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
-import TodoList from '../src/todo-list';
-import TodoItem from '../src/todo-item';
+import TodoList from '../src/components/todo-list';
+import TodoItem from '../src/components/todo-item';
 
 describe('TodoList', () => {
   const todos = [{text: 'Buy milk', isComplete: false }];

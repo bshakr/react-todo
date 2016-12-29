@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class InputField extends Component {
   constructor() {
     super();
