@@ -1,29 +1,55 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import actions from '../actions'
 
 class InputField extends Component {
   constructor() {
     super();
-    this.validateSubmit = this.validateSubmit.bind(this);
-
-  }
-  validateSubmit(event) {
-    if (event.key === 'Enter' && event.target.value !== '') {
-      this.props.addTodo(event);
+    this.state = {
+      inputText: ''
     }
   }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.actions.addTodo(this.state.inputText)
+    this.setState({ inputText: '' })
+  }
+
+  handleChange(event) {
+    this.setState({
+      inputText: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="row">
         <div className="col-sm-10 col-sm-offset-1">
-          <input 
-            onKeyPress={this.validateSubmit}
-            type="text" 
-            className="form-control input-lg" 
-            placeholder="Enter a todo" />
+          <form onSubmit={this.handleSubmit.bind(this)}>
+            <input 
+              type="text" 
+              placeholder="Enter a todo"
+              value={this.state.inputText}
+              onChange={this.handleChange.bind(this)}
+              className="form-control input-lg" />
+            </form>
         </div>
       </div>
     );
   }
 }
 
-export default InputField
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  }
+}
+
+function mapStateToProps(state){
+  return state
+}
+
+export default connect(mapStateToProps, mapDispatchToProps
+    )(InputField)
