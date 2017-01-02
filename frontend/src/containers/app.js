@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="col-sm-6 col-sm-offset-3">
+        <div className="col-sm-8 col-sm-offset-2">
           <div className="todo-day-container">
             <Header />
             <InputField />

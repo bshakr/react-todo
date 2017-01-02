@@ -5,6 +5,9 @@ import actions from '../actions'
 import TodoItem from './todo-item'
 
 class TodoList extends Component {
+  componentWillMount(){
+    this.props.actions.getTodos()
+  }
   render() {
     const todos = this.props.todos.map((todo) => {
       return (<TodoItem actions={this.props.actions} key={todo.id} {...todo} />);

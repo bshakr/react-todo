@@ -4,6 +4,8 @@ function generateNextId(todos) {
 
 let todoReducer = function(todos = [], action) {
   switch (action.type) {
+    case 'GET_TODOS':
+      return action.payload
     case 'ADD_TODO':
       return [{
         text: action.text,
