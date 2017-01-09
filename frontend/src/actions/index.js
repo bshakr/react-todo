@@ -13,24 +13,41 @@ let actions = {
       })
     }
   },
+
   addTodo: function(text) {
-    return {
-      type: 'ADD_TODO',
-      text: text
+    const request = axios.post(`${API_URL}/todos`, { text: text })
+
+    return (dispatch) => {
+      request.then((response) => {
+        dispatch({
+          type: 'ADD_TODO',
+          text: text
+        })
+      })
     }
   },
- 
-  completeTodo: function(id) {
-    return {
-      type: 'COMPLETE_TODO',
-      id: id
+
+  toggleTodo: function(todo) {
+    const request = axios.patch(`${API_URL}/todos/${todo.id}`, { completed: !todo.completed })
+    return (dispatch) => {
+      request.then((response) => {
+        dispatch({
+          type: 'TOGGLE_TODO',
+          id: todo.id
+        })
+      })
     }
   },
   
   deleteTodo: function(id) {
-    return {
-      type: 'DELETE_TODO',
-      id: id
+    const request = axios.delete(`${API_URL}/todos/${id}`)
+    return (dispatch) => {
+      request.then((response) => {
+        dispatch({
+          type: 'DELETE_TODO',
+          id: id
+        })
+      })
     }
   }
 }

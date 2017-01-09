@@ -14,8 +14,8 @@ class TodoItem extends Component {
     this.props.actions.deleteTodo(this.props.id)
   }
 
-  handleComplete(event) {
-    this.props.actions.completeTodo(this.props.id)
+  handleToggle(event) {
+    this.props.actions.toggleTodo(this.props)
   }
 
   render() {
@@ -23,8 +23,8 @@ class TodoItem extends Component {
       <li className="todo-item">
         <input 
           type="checkbox"
-          checked={this.props.isComplete}
-          onChange={this.handleComplete.bind(this)} />
+          checked={this.props.completed}
+          onChange={this.handleToggle.bind(this)} />
         &nbsp;
         &nbsp;
         {this.todoMessage()}

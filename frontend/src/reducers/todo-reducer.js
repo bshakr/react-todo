@@ -12,7 +12,7 @@ let todoReducer = function(todos = [], action) {
         completed: false,
         id: generateNextId(todos)
       }, ...todos]
-    case 'COMPLETE_TODO':
+    case 'TOGGLE_TODO':
       return todos.map((todo) => {
         return todo.id ===   action.id ?
           Object.assign({}, todo, { completed: !todo.completed }) : todo
