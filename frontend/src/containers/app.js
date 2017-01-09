@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../components/header'
 import InputField from '../components/input-field'
 import TodoList from '../components/todo-list'
+import DevTools from './dev-tools';
 import '../app.css'
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
             <Header />
             <InputField />
             <TodoList />
+            <DevTools />
           </div>
         </div>
       </div>
