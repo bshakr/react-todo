@@ -38,3 +38,15 @@ li.todo-item {
   border-radius: 4px;
   color: #888;
 }
+
+.btn.btn-circle {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 900;
+  border-radius: 50%;
+}
+

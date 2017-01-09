@@ -28,7 +28,7 @@ class TodoItem extends Component {
         &nbsp;
         &nbsp;
         {this.todoMessage()}
-        <button className="btn btn-xs btn-danger pull-right" onClick={this.handleDelete.bind(this)}>Delete</button>
+        <button className="btn btn-xs btn-danger btn-circle pull-right" onClick={this.handleDelete.bind(this)}>&times;</button>
       </li>
     );
   }
