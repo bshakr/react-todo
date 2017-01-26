@@ -13,3 +13,17 @@ render(
   </Provider>,
   document.getElementById('root')
 );
+
+if (module.hot) {
+  module.hot.accept('./containers/app', () => {
+    const NextApp = require('./containers/app').default
+
+    render(
+      <Provider store={store}>
+				<NextApp />
+			</Provider>,
+      document.getElementById('root')
+    )
+  })
+}
+
